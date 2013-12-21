@@ -1,0 +1,13 @@
+{
+    "name": "netwing/skeleton",
+    "description": "Netwing skeleton",
+    "license": "proprietary",
+    "require": {
+    },
+    "require-dev": {
+        "codeception/codeception": "1.8.*",
+        "netwing/selenium-server-standalone": "dev-master",
+        "kevintweber/phpunit-markup-validators": "*"
+    },
+    "minimum-stability": "stable"
+}
