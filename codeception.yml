@@ -20,6 +20,7 @@ coverage:
     enabled: true
     whitelist:
         include:
+            - index.php
             - MyClass.php
     blacklist:
         include: 

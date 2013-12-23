@@ -11,9 +11,9 @@
 class_name: WebGuy
 modules:
     enabled:
-        - WebDriver
+        - PhpBrowser
         - WebHelper
     config:
-        WebDriver:
-            url: 'http://yiiapp1.ispeed.local/'
-            browser: 'firefox'
+        PhpBrowser:
+             url: 'http://yiiapp1.ispeed.local/'
+             #browser: 'firefox'

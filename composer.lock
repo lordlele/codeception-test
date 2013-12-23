@@ -756,12 +756,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/netwing/selenium-server.git",
-                "reference": "bc22f8c27842483de55c662e89a2b668b50fb9e9"
+                "reference": "ddc3b71e4a7b252067f438c3c71f64f98c0e1079"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/netwing/selenium-server/zipball/bc22f8c27842483de55c662e89a2b668b50fb9e9",
-                "reference": "bc22f8c27842483de55c662e89a2b668b50fb9e9",
+                "url": "https://api.github.com/repos/netwing/selenium-server/zipball/ddc3b71e4a7b252067f438c3c71f64f98c0e1079",
+                "reference": "ddc3b71e4a7b252067f438c3c71f64f98c0e1079",
                 "shasum": ""
             },
             "type": "library",
@@ -780,7 +780,7 @@
                 "selenium",
                 "testing"
             ],
-            "time": "2013-12-17 15:13:47"
+            "time": "2013-12-22 15:27:34"
         },
         {
             "name": "phpunit/php-code-coverage",
