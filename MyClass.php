@@ -8,8 +8,9 @@ class MyClass
 		$beta = 2;
 		$string = "Hello World";
 		echo $string;
-
 		echo $this->doSomething();
+		echo $this->doAnotherThing();
+		print_r($_COOKIE);
 	}
 
 	public function doSomething()

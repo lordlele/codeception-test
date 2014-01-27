@@ -15,5 +15,5 @@ modules:
         - WebHelper
     config:
         PhpBrowser:
-             url: 'http://yiiapp1.ispeed.local/'
+             url: 'http://emanuele.ispeed.local/codeception-test/'
              #browser: 'firefox'

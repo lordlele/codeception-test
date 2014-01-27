@@ -3,49 +3,29 @@
 // @codeCoverageIgnoreStart
 
 /**
- * C3 - Codeception Code Coverage
- *
- * @author tiger
- */
-
-
-$debugfile = __DIR__ . "/c3tmp/" . time() . "-debug.txt";
-
-// $_SERVER['HTTP_X_CODECEPTION_CODECOVERAGE_DEBUG'] = 1;
-/*
-$_COOKIE['CODECEPTION_CODECOVERAGE'] = json_encode(array(
-    "CodeCoverage" => "ApplicationCept.php",
-    "CodeCoverage_Suite" => "acceptance",
-));
+* C3 - Codeception Code Coverage
+*
+* @author tiger
 */
 
-file_put_contents($debugfile, "REQUEST" . PHP_EOL, FILE_APPEND);
-file_put_contents($debugfile, print_r($_REQUEST, true), FILE_APPEND);
-
-file_put_contents($debugfile, "COOKIE" . PHP_EOL, FILE_APPEND);
-file_put_contents($debugfile, print_r($_COOKIE, true), FILE_APPEND);
+// $_SERVER['HTTP_X_CODECEPTION_CODECOVERAGE_DEBUG'] = 1;
 
 if (isset($_COOKIE['CODECEPTION_CODECOVERAGE'])) {
     $cookie = json_decode($_COOKIE['CODECEPTION_CODECOVERAGE'], true);
 
-    if ($cookie) {    
+    if ($cookie) {
         foreach ($cookie as $key => $value) {
             $_SERVER["HTTP_X_CODECEPTION_".strtoupper($key)] = $value;
         }
     }
 }
 
-file_put_contents($debugfile, "SERVER" . PHP_EOL, FILE_APPEND);
-file_put_contents($debugfile, print_r($_SERVER, true), FILE_APPEND);
 if (!array_key_exists('HTTP_X_CODECEPTION_CODECOVERAGE', $_SERVER)) {
     return;
 }
 
-file_put_contents($debugfile, "time to go" . PHP_EOL, FILE_APPEND);
-
 if (!defined('C3_CODECOVERAGE_MEDIATE_STORAGE')) {
 
-    file_put_contents($debugfile, "start do things..." . PHP_EOL, FILE_APPEND);
     // workaround for 'zend_mm_heap corrupted' problem
     gc_disable();
 
@@ -106,9 +86,9 @@ if (!defined('C3_CODECOVERAGE_MEDIATE_STORAGE')) {
     }
 
     /**
-     * @param $filename
-     * @return null|PHP_CodeCoverage
-     */
+* @param $filename
+* @return null|PHP_CodeCoverage
+*/
     function __c3_factory($filename)
     {
         $phpCoverage = is_readable($filename)
@@ -190,22 +170,17 @@ if (!file_exists($config_file)) {
     __c3_error(sprintf("Codeception config file '%s' not found", $config_file));
 }
 
-file_put_contents($debugfile, "Config file: " . $config_file . PHP_EOL, FILE_APPEND);
-
 try {
     \Codeception\Configuration::config($config_file);
 } catch (\Exception $e) {
     __c3_error($e->getMessage());
 }
 
-file_put_contents($debugfile, "Loaded config from " . $config_file . PHP_EOL, FILE_APPEND);
 
 // evaluate base path for c3-related files
 $path = realpath(C3_CODECOVERAGE_MEDIATE_STORAGE) . DIRECTORY_SEPARATOR . 'codecoverage';
 
 $requested_c3_report = (strpos($_SERVER['REQUEST_URI'], 'c3/report') !== false);
-
-file_put_contents($debugfile, "Report: " . $requested_c3_report . PHP_EOL, FILE_APPEND);
 
 $current_report = $path;
 $complete_report = $path . '.serialized';
@@ -221,14 +196,11 @@ if ($requested_c3_report) {
 
     $route = ltrim(strrchr($_SERVER['REQUEST_URI'], '/'), '/');
 
-    file_put_contents($debugfile, "Route: " . $route . PHP_EOL, FILE_APPEND);
-
     if ($route == 'clear') {
         __c3_clear();
         return __c3_exit();
     }
 
-    file_put_contents($debugfile, "Factory: " . $complete_report . PHP_EOL, FILE_APPEND);
     $codeCoverage = __c3_factory($complete_report);
 
     switch ($route) {
@@ -256,14 +228,11 @@ if ($requested_c3_report) {
     }
 
 } else {
-    file_put_contents($debugfile, "Else" . PHP_EOL, FILE_APPEND);
     if (file_exists($complete_report)) {
         unlink($complete_report);
     }
-    file_put_contents($debugfile, "Factory: " . $current_report . PHP_EOL, FILE_APPEND);
     $codeCoverage = __c3_factory($current_report);
     $codeCoverage->start(C3_CODECOVERAGE_TESTNAME);
-    file_put_contents($debugfile, "Register shutdown function" . PHP_EOL, FILE_APPEND);
     register_shutdown_function(
         function () use ($codeCoverage, $current_report) {
             $codeCoverage->stop();
