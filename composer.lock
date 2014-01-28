@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "189751aef7d1ff39cc61fcdee87e12ef",
+    "hash": "e2340fbec02bd20ba64cd59928528dfe",
     "packages": [
 
     ],
@@ -229,16 +229,16 @@
         },
         {
             "name": "codeception/codeception",
-            "version": "dev-master",
+            "version": "1.8.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "d3db8d3562d70935cf7288c35fb4a21e9aa91fca"
+                "reference": "741cb1b0582f143410251a0808d24c65950b0401"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/85b35a189dbee7c858c12d5a855da1865d7719f5",
-                "reference": "d3db8d3562d70935cf7288c35fb4a21e9aa91fca",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/741cb1b0582f143410251a0808d24c65950b0401",
+                "reference": "741cb1b0582f143410251a0808d24c65950b0401",
                 "shasum": ""
             },
             "require": {
@@ -292,7 +292,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2014-01-26 04:05:03"
+            "time": "2014-01-28 03:07:02"
         },
         {
             "name": "fabpot/goutte",
