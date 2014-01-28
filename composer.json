@@ -5,9 +5,8 @@
     "require": {
     },
     "require-dev": {
-        "codeception/codeception": "dev-master#d3db8d3562d70935cf7288c35fb4a21e9aa91fca",
+        "codeception/codeception": "1.8.*@dev",
         "netwing/selenium-server-standalone": "dev-master",
         "kevintweber/phpunit-markup-validators": "*"
-    },
-    "minimum-stability": "stable"
+    }
 }
