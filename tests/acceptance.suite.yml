@@ -11,9 +11,9 @@
 class_name: WebGuy
 modules:
     enabled:
-        - WebDriver
+        - PhpBrowser
         - WebHelper
     config:
-        WebDriver:
+        PhpBrowser:
              url: 'http://emanuele.ispeed.local/codeception-test/'
-             browser: 'firefox'
+             #browser: 'firefox'
