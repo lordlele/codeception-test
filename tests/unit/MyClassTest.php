@@ -33,5 +33,4 @@ class MyClassTest extends \Codeception\TestCase\Test
         $this->assertEquals($expected, $actual);
     }
 
-
 }

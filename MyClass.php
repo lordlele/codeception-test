@@ -9,7 +9,7 @@ class MyClass
 		$string = "Hello World";
 		echo $string;
 		echo $this->doSomething();
-		echo $this->doAnotherThing();
+		// echo $this->doAnotherThing();
 		print_r($_COOKIE);
 	}
 
