@@ -1,16 +1,17 @@
 <?php
+namespace apirest;
 use Codeception\Util\Stub;
 
 class MyClassTest extends \Codeception\TestCase\Test
 {
    /**
-    * @var \CodeGuy
+    * @var \apirest\CodeGuy
     */
     protected $codeGuy;
 
     protected function _before()
     {
-        require_once __DIR__ . "/../../MyClass.php";
+        require_once __DIR__ . "/../../../../MyClass.php";
     }
 
     protected function _after()
@@ -20,7 +21,7 @@ class MyClassTest extends \Codeception\TestCase\Test
     public function testDoSomething()
     {
         $expected = "..........";
-        $class = new MyClass();
+        $class = new \MyClass();
         $actual = $class->doSomething();
         $this->assertEquals($expected, $actual);
     }
@@ -28,9 +29,10 @@ class MyClassTest extends \Codeception\TestCase\Test
     public function testDoAnotherThing()
     {
         $expected = "**********";
-        $class = new MyClass();
+        $class = new \MyClass();
         $actual = $class->doAnotherThing();
         $this->assertEquals($expected, $actual);
     }
+
 
 }

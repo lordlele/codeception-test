@@ -1,4 +1,5 @@
-<?php
+<?php use apirest\WebGuy;
+
 $I = new WebGuy($scenario);
 $I->wantTo('test application start');
 $I->amOnPage("/index.php");

@@ -3,9 +3,9 @@
 // You should not change it manually as it will be overwritten on next build
 // @codingStandardsIgnoreFile
 
-
+namespace frontend;
 use \Codeception\Maybe;
-use Codeception\Module\CodeHelper;
+use frontend\Codeception\Module\CodeHelper;
 
 /**
  * Inherited methods

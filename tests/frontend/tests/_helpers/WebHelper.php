@@ -1,5 +1,5 @@
 <?php
-namespace Codeception\Module;
+namespace frontend\Codeception\Module;
 
 // here you can define custom functions for WebGuy 
 

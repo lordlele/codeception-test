@@ -3,10 +3,10 @@
 // You should not change it manually as it will be overwritten on next build
 // @codingStandardsIgnoreFile
 
-
+namespace frontend;
 use \Codeception\Maybe;
 use Codeception\Module\Filesystem;
-use Codeception\Module\TestHelper;
+use frontend\Codeception\Module\TestHelper;
 
 /**
  * Inherited methods
