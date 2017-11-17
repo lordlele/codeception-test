@@ -17,3 +17,5 @@ modules:
         PhpBrowser:
              url: 'http://yiiapp1.ispeed.local/'
              #browser: 'firefox'
+coverage:
+    remote: true
